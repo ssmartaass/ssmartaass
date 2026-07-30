@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 480" width="100%">
+  <style>
+    .bg { fill: #0d1117; rx: 6px; }
+    .header { fill: #161b22; }
+    .title { font: bold 12px Consolas, monospace; fill: #8b949e; text-anchor: middle; }
+    .text-muted { font: 13px Consolas, monospace; fill: #6e7681; }
+    .text-prompt { font: 13px Consolas, monospace; fill: #6e7681; }
+    .text-cmd { font: 13px Consolas, monospace; fill: #8b949e; }
+    .text-out { font: 13px Consolas, monospace; fill: #ffffff; }
+
+    @keyframes reveal {
+      0% { width: 0px; }
+      100% { width: 600px; }
+    }
+
+    .anim-role { animation: reveal 0.6s steps(12) 0.5s forwards; }
+    .anim-focus { animation: reveal 1.2s steps(25) 1.3s forwards; }
+    .anim-skills { animation: reveal 1.8s steps(35) 2.7s forwards; }
+    .anim-lang { animation: reveal 0.8s steps(15) 4.7s forwards; }
+  </style>
+
+  <clipPath id="clip-role"><rect x="0" y="0" width="0" height="1000" class="anim-role"/></clipPath>
+  <clipPath id="clip-focus"><rect x="0" y="0" width="0" height="1000" class="anim-focus"/></clipPath>
+  <clipPath id="clip-skills"><rect x="0" y="0" width="0" height="1000" class="anim-skills"/></clipPath>
+  <clipPath id="clip-lang"><rect x="0" y="0" width="0" height="1000" class="anim-lang"/></clipPath>
+
+  <rect width="620" height="480" class="bg" />
+  <path d="M 0,6 Q 0,0 6,0 L 614,0 Q 620,0 620,6 L 620,32 L 0,32 Z" class="header" />
+  <text x="310" y="21" class="title">Administrator: Windows PowerShell</text>
+
+  <g transform="translate(15, 35)">
+    <text x="0" y="25" class="text-muted">Windows PowerShell</text>
+    <text x="0" y="43" class="text-muted">Copyright (C) Microsoft Corporation. All rights reserved.</text>
+
+    <!-- Role -->
+    <text x="0" y="75" class="text-prompt">PS C:\GitHub_Profile&gt; <tspan class="text-cmd">role</tspan></text>
+    <g clip-path="url(#clip-role)">
+      <text x="0" y="95" class="text-out">LLM Engineer</text>
+    </g>
+
+    <!-- Focus -->
+    <text x="0" y="130" class="text-prompt">PS C:\GitHub_Profile&gt; <tspan class="text-cmd">focus</tspan></text>
+    <g clip-path="url(#clip-focus)">
+      <text x="0" y="150" class="text-out">AI Engineering</text>
+      <text x="0" y="168" class="text-out">Agents</text>
+      <text x="0" y="186" class="text-out">LLM Systems</text>
+    </g>
+
+    <!-- Skills -->
+    <text x="0" y="221" class="text-prompt">PS C:\GitHub_Profile&gt; <tspan class="text-cmd">skills</tspan></text>
+    <g clip-path="url(#clip-skills)">
+      <text x="0" y="241" class="text-out">PyTorch</text>
+      <text x="0" y="259" class="text-out">Embeddings</text>
+      <text x="0" y="277" class="text-out">RAG</text>
+      <text x="0" y="295" class="text-out">Ollama</text>
+      <text x="0" y="313" class="text-out">Git</text>
+      <text x="0" y="331" class="text-out">Docker</text>
+    </g>
+
+    <!-- Languages -->
+    <text x="0" y="366" class="text-prompt">PS C:\GitHub_Profile&gt; <tspan class="text-cmd">languages</tspan></text>
+    <g clip-path="url(#clip-lang)">
+      <text x="0" y="386" class="text-out">Python</text>
+      <text x="0" y="404" class="text-out">SQL</text>
+    </g>
+
+    <!-- Connect -->
+    <text x="0" y="439" class="text-prompt">PS C:\GitHub_Profile&gt; <tspan class="text-cmd">connect</tspan></text>
+  </g>
+</svg>
